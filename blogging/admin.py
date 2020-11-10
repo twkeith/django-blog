@@ -7,12 +7,14 @@ class ThemesInline(admin.TabularInline):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    inlines = [ThemesInline]
+    # inlines = [ThemesInline]
+    exclude = ('posts',)
 
 
 class PostAdmin(admin.ModelAdmin):
     inlines = [ThemesInline]
-    exclude = ('posts',)
+    # exclude = ('posts',)
+
 
 # and a new admin registration
 admin.site.register(Post, PostAdmin)
