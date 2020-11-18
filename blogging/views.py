@@ -15,7 +15,8 @@ class BlogListView(ListView):
 
 
 class BlogDetailView(DetailView):
-    model = Post
+
+    queryset = Post.objects.filter(published_date__isnull=False)
     template_name = 'blogging/detail.html'
 
 
