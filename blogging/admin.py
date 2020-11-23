@@ -8,7 +8,7 @@ class ThemesInline(admin.TabularInline):
 
 class CategoryAdmin(admin.ModelAdmin):
     # inlines = [ThemesInline]
-    exclude = ('posts',)
+    exclude = ("posts",)
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -19,4 +19,3 @@ class PostAdmin(admin.ModelAdmin):
 # and a new admin registration
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category, CategoryAdmin)
-
